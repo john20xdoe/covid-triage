@@ -8,11 +8,11 @@ export default function(containerRef) {
       Root: {
         path: 'root',
         screens: {
-          Home: 'home',
-          Links: 'links',
-          Settings: 'settings',
-        },
-      },
-    },
+          Triage: 'triage',
+          Timeline: 'timeline',
+          Map: 'map'
+        }
+      }
+    }
   });
 }
