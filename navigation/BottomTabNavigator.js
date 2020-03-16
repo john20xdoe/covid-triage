@@ -55,7 +55,7 @@ function getHeaderTitle(route) {
     route.state?.routes[route.state.index]?.name ?? INITIAL_ROUTE_NAME;
 
   switch (routeName) {
-    case 'Home':
+    case 'Triage':
       return 'Triage your symptoms';
     case 'Timeline':
       return 'Symptoms Timeline';
