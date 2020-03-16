@@ -2,7 +2,8 @@ import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
+import TimelineScreen from '../screens/TimelineScreen';
+import { Feather } from '@expo/vector-icons';
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Home';
@@ -19,16 +20,33 @@ export default function BottomTabNavigator({ navigation, route }) {
         name="Home"
         component={HomeScreen}
         options={{
-          title: 'Get Started',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
+          title: 'Triage',
+          tabBarIcon: ({ focused }) => (
+            <TabBarIcon
+              focused={focused}
+              name="md-checkbox-outline"
+            />
+          )
         }}
       />
       <BottomTab.Screen
-        name="Links"
-        component={LinksScreen}
+        name="Timeline"
+        component={TimelineScreen}
         options={{
-          title: 'Resources',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
+          title: 'Timeline',
+          tabBarIcon: ({ focused }) => (
+            <TabBarIcon focused={focused} name="md-analytics" />
+          )
+        }}
+      />
+      <BottomTab.Screen
+        name="Map"
+        component={TimelineScreen}
+        options={{
+          title: 'Map',
+          tabBarIcon: ({ focused }) => (
+            <TabBarIcon focused={focused} name="md-pin" />
+          )
         }}
       />
     </BottomTab.Navigator>
@@ -36,12 +54,15 @@ export default function BottomTabNavigator({ navigation, route }) {
 }
 
 function getHeaderTitle(route) {
-  const routeName = route.state?.routes[route.state.index]?.name ?? INITIAL_ROUTE_NAME;
+  const routeName =
+    route.state?.routes[route.state.index]?.name ?? INITIAL_ROUTE_NAME;
 
   switch (routeName) {
     case 'Home':
-      return 'How to get started';
-    case 'Links':
-      return 'Links to learn more';
+      return 'Triage your symptoms';
+    case 'Timeline':
+      return 'Symptoms Timeline';
+    case 'Map':
+      return 'Map of Nearest Medical Help';
   }
 }
