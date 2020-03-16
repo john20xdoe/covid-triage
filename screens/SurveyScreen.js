@@ -8,7 +8,7 @@ import {
   View
 } from 'react-native';
 import { SimpleSurvey } from 'react-native-simple-survey';
-import { COLORS } from '../res/validColors';
+import { COLORS } from '../constants/Colors';
 
 const GREEN = 'rgba(141,196,63,1)';
 const PURPLE = 'rgba(108,48,237,1)';
