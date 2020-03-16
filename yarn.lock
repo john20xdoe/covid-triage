@@ -4795,6 +4795,20 @@ react-native-screens@2.0.0-alpha.12:
   dependencies:
     debounce "^1.2.0"
 
+react-native-selection-group@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-selection-group/-/react-native-selection-group-2.0.0.tgz#8b6ba467d9f000615f20710fd2044118323408ba"
+  integrity sha512-jRnqwOYzPayfB0PvLpgwYCiCPMOp8sXUufeBlI4NXIGHB8MGE/TA8jazq/eER99mTUA5e44JpDEALpEyghhN4A==
+  dependencies:
+    prop-types "^15.6.1"
+
+react-native-simple-survey@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/react-native-simple-survey/-/react-native-simple-survey-3.1.2.tgz#7cda7d4a7a7f984e4df241eac0389c2f6dbfd16d"
+  integrity sha512-CU+CoDrcegbpk2qf5LanMmrPQs/gVHD9QncZINX/6my5ES0M4KebzjvDlJbuo+RhEUAcW1PfMVlhKY95SF9v4g==
+  dependencies:
+    react-native-selection-group "^2.0.0"
+
 react-native-view-shot@3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/react-native-view-shot/-/react-native-view-shot-3.0.2.tgz#daccaec5b8038a680b17533ff7e72876e68c7d0d"
