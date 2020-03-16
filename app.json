@@ -1,14 +1,11 @@
 {
   "expo": {
-    "name": "Tab Navigation Template",
+    "name": "COVID-19 Triage",
     "slug": "covid-triage",
-    "privacy": "public",
+    "privacy": "unlisted",
+    "author": "pinoy.dev",
     "sdkVersion": "36.0.0",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -21,9 +18,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     }
