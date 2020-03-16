@@ -8,23 +8,23 @@ export default function MapScreen() {
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
       <OptionButton
-        icon="md-school"
-        label="Read the Expo documentation"
-        onPress={() => WebBrowser.openBrowserAsync('https://docs.expo.io')}
+        icon="md-alert"
+        label="HOSPITALS - for emergencies"
+        onPress={() => WebBrowser.openBrowserAsync('https://www.google.com/maps/search/hospitals/')}
       />
 
       <OptionButton
-        icon="md-compass"
-        label="Read the React Navigation documentation"
-        onPress={() => WebBrowser.openBrowserAsync('https://reactnavigation.org')}
+        icon="md-pin"
+        label="CLINICS - for other conditions"
+        onPress={() => WebBrowser.openBrowserAsync('https://www.google.com/maps/search/clinics')}
       />
 
-      <OptionButton
-        icon="ios-chatboxes"
-        label="Ask a question on the forums"
+      {/* <OptionButton
+        icon="md-home"
+        label="SELF-QUARANTINE - information"
         onPress={() => WebBrowser.openBrowserAsync('https://forums.expo.io')}
         isLastOption
-      />
+      /> */}
     </ScrollView>
   );
 }
