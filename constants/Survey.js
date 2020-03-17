@@ -1,8 +1,72 @@
 export const survey = [
   {
     questionType: 'Info',
-    questionText:
-      'Welcome2 to the React Native Simple Survey Example app! Tap next to continue'
+    questionText: `
+    The healthcare systems are crowded.
+    This questionnaire will help you assess your severity.
+  `
+  },
+  {
+    questionType: 'SelectionGroup',
+    questionText: 'Where are you right now?',
+    questionId: 'locationPreference',
+    questionSettings: {
+      allowDeselect: false
+    },
+    options: [
+      {
+        optionText: `Take my location`,
+        value: 'option 2'
+      },
+      {
+        optionText: `I don't know, but I am travelling to a known place`,
+        value: 'option 1'
+      },
+      {
+        optionText: `Can't tell`,
+        value: 'option 3'
+      }
+    ]
+  },
+  {
+    questionType: 'MultipleSelectionGroup',
+    questionText: `
+    Right now, which are you experiencing?
+    Select the most severe 3.
+    `,
+    questionId: 'currentSymptoms',
+    questionSettings: {
+      maxMultiSelect: 3,
+      minMultiSelect: 1
+    },
+    options: [
+      {
+        optionText: 'Fever',
+        value: 'fever'
+      },
+      {
+        optionText: 'Difficult breathing',
+        value: 'difficult breathing'
+      },
+      {
+        optionText: 'Slight cough',
+        value: 'slight cough'
+      },
+      {
+        optionText: 'Severe cough',
+        value: 'severe cough'
+      },
+      {
+        optionText: 'None of the above',
+        value: 'none severe'
+      }
+    ]
+  },
+  {
+    questionType: 'NumericInput',
+    questionText: 'What is your age?',
+    questionId: 'age',
+    placeholderText: '(number)'
   },
   {
     questionType: 'TextInput',
@@ -11,13 +75,7 @@ export const survey = [
     questionId: 'favoriteColor',
     placeholderText: 'Tell me your favorite color!'
   },
-  {
-    questionType: 'NumericInput',
-    questionText:
-      'It also supports numeric input. Enter your favorite number here!',
-    questionId: 'favoriteNumber',
-    placeholderText: '42'
-  },
+
   {
     questionType: 'NumericInput',
     questionText:
@@ -53,49 +111,7 @@ export const survey = [
       }
     ]
   },
-  {
-    questionType: 'MultipleSelectionGroup',
-    questionText: 'Select two or three of your favorite foods!',
-    questionId: 'favoriteFoods',
-    questionSettings: {
-      maxMultiSelect: 3,
-      minMultiSelect: 2
-    },
-    options: [
-      {
-        optionText: 'Sticky rice dumplings',
-        value: 'sticky rice dumplings'
-      },
-      {
-        optionText: 'Pad Thai',
-        value: 'pad thai'
-      },
-      {
-        optionText: 'Steak and Eggs',
-        value: 'steak and eggs'
-      },
-      {
-        optionText: 'Tofu',
-        value: 'tofu'
-      },
-      {
-        optionText: 'Ice cream!',
-        value: 'ice cream'
-      },
-      {
-        optionText: 'Injera',
-        value: 'injera'
-      },
-      {
-        optionText: 'Biryani',
-        value: 'biryani'
-      },
-      {
-        optionText: 'Tamales',
-        value: 'tamales'
-      }
-    ]
-  },
+
   {
     questionType: 'MultipleSelectionGroup',
     questionText:
@@ -125,29 +141,7 @@ export const survey = [
       }
     ]
   },
-  {
-    questionType: 'SelectionGroup',
-    questionText:
-      'Simple Survey can also simulate radio button behavior. Pick from below: ',
-    questionId: 'radio',
-    questionSettings: {
-      allowDeselect: false
-    },
-    options: [
-      {
-        optionText: 'I was forced to pick option 1',
-        value: 'option 1'
-      },
-      {
-        optionText: 'I have to pick option 2',
-        value: 'option 2'
-      },
-      {
-        optionText: 'I guess option 3',
-        value: 'option 3'
-      }
-    ]
-  },
+
   {
     questionType: 'SelectionGroup',
     questionText: 'Simple Survey also supports default selections: ',
