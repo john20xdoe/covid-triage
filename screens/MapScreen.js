@@ -6,32 +6,50 @@ import { RectButton, ScrollView } from 'react-native-gesture-handler';
 
 export default function MapScreen() {
   return (
-    <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={styles.contentContainer}
+    >
       <OptionButton
         icon="md-alert"
         label="HOSPITALS - for emergencies"
-        onPress={() => WebBrowser.openBrowserAsync('https://www.google.com/maps/search/hospitals/')}
+        onPress={() =>
+          WebBrowser.openBrowserAsync(
+            'https://www.google.com/maps/search/hospitals/'
+          )
+        }
       />
 
       <OptionButton
         icon="md-pin"
         label="CLINICS - for other conditions"
-        onPress={() => WebBrowser.openBrowserAsync('https://www.google.com/maps/search/clinics')}
+        onPress={() =>
+          WebBrowser.openBrowserAsync(
+            'https://www.google.com/maps/search/clinics'
+          )
+        }
       />
 
-      {/* <OptionButton
+      <OptionButton
         icon="md-home"
-        label="SELF-QUARANTINE - information"
-        onPress={() => WebBrowser.openBrowserAsync('https://forums.expo.io')}
+        label="HOSPITALS - equipped for testing"
+        onPress={() =>
+          WebBrowser.openBrowserAsync(
+            'https://www.google.com/maps/d/embed?mid=1fLGy90ANDvsdhjOPJZDVa8N7U0idMYlj'
+          )
+        }
         isLastOption
-      /> */}
+      />
     </ScrollView>
   );
 }
 
 function OptionButton({ icon, label, onPress, isLastOption }) {
   return (
-    <RectButton style={[styles.option, isLastOption && styles.lastOption]} onPress={onPress}>
+    <RectButton
+      style={[styles.option, isLastOption && styles.lastOption]}
+      onPress={onPress}
+    >
       <View style={{ flexDirection: 'row' }}>
         <View style={styles.optionIconContainer}>
           <Ionicons name={icon} size={22} color="rgba(0,0,0,0.35)" />
@@ -47,13 +65,13 @@ function OptionButton({ icon, label, onPress, isLastOption }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fafafa',
+    backgroundColor: '#fafafa'
   },
   contentContainer: {
-    paddingTop: 15,
+    paddingTop: 15
   },
   optionIconContainer: {
-    marginRight: 12,
+    marginRight: 12
   },
   option: {
     backgroundColor: '#fdfdfd',
@@ -61,14 +79,14 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     borderWidth: StyleSheet.hairlineWidth,
     borderBottomWidth: 0,
-    borderColor: '#ededed',
+    borderColor: '#ededed'
   },
   lastOption: {
-    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomWidth: StyleSheet.hairlineWidth
   },
   optionText: {
     fontSize: 15,
     alignSelf: 'flex-start',
-    marginTop: 1,
-  },
+    marginTop: 1
+  }
 });
