@@ -6,7 +6,7 @@ import TimelineScreen from '../screens/TimelineScreen';
 import MapScreen from '../screens/MapScreen';
 
 const BottomTab = createBottomTabNavigator();
-const INITIAL_ROUTE_NAME = 'Home';
+const INITIAL_ROUTE_NAME = 'Triage';
 
 export default function BottomTabNavigator({ navigation, route }) {
   // Set the header title on the parent stack navigator depending on the
@@ -17,32 +17,32 @@ export default function BottomTabNavigator({ navigation, route }) {
   return (
     <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}>
       <BottomTab.Screen
-        name='Triage'
+        name="Triage"
         component={TriageScreen}
         options={{
           title: 'Triage',
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon focused={focused} name='md-checkbox-outline' />
+            <TabBarIcon focused={focused} name="md-checkbox-outline" />
           )
         }}
       />
       <BottomTab.Screen
-        name='Timeline'
+        name="Timeline"
         component={TimelineScreen}
         options={{
           title: 'Timeline',
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon focused={focused} name='md-analytics' />
+            <TabBarIcon focused={focused} name="md-analytics" />
           )
         }}
       />
       <BottomTab.Screen
-        name='Map'
+        name="Map"
         component={MapScreen}
         options={{
           title: 'Map',
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon focused={focused} name='md-pin' />
+            <TabBarIcon focused={focused} name="md-pin" />
           )
         }}
       />
