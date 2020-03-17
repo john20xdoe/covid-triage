@@ -234,7 +234,7 @@ export default class TriageScreen extends React.Component {
               flexDirection: 'row',
               justifyContent: 'space-around',
               marginTop: 'auto',
-              marginBottom: '30'
+              marginBottom: 30
             }}
             renderPrevious={this.renderPreviousButton.bind(this)}
             renderNext={this.renderNextButton.bind(this)}
@@ -255,7 +255,9 @@ export default class TriageScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#efefef'
+    backgroundColor: '#fdfdfd',
+    width: 'auto',
+    marginHorizontal: 10
   },
   contentContainer: {
     flex: 1
@@ -266,19 +268,12 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     flex: 1,
     alignContent: 'center',
-    marginVertical: 'auto'
+    paddingVertical: 30
   },
   selectionGroupContainer: {
     flexDirection: 'column',
     backgroundColor: 'white',
     alignContent: 'flex-end'
-  },
-  background: {
-    flex: 1,
-    minHeight: 800,
-    maxHeight: 800,
-    justifyContent: 'center',
-    alignItems: 'center'
   },
   questionText: {
     marginBottom: 20,
