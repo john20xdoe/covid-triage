@@ -8,10 +8,7 @@ import {
   View
 } from 'react-native';
 import { SimpleSurvey } from 'react-native-simple-survey';
-import { COLORS } from '../constants/Colors';
-
-const GREEN = 'rgba(141,196,63,1)';
-const PURPLE = 'rgba(108,48,237,1)';
+import { COLORS, GREEN, PURPLE } from '../constants/Colors';
 
 const survey = [
   {
@@ -219,12 +216,11 @@ export default class SurveyScreen extends Component {
   static navigationOptions = () => {
     return {
       headerStyle: {
-        backgroundColor: GREEN,
         height: 40,
         elevation: 5
       },
       headerTintColor: '#fff',
-      headerTitle: 'Sample Survey',
+      headerTitle: 'Triage Symptoms',
       headerTitleStyle: {
         flex: 1
       }
@@ -233,7 +229,7 @@ export default class SurveyScreen extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { backgroundColor: PURPLE, answersSoFar: '' };
+    this.state = { answersSoFar: '' };
   }
 
   onSurveyFinished(answers) {
@@ -376,7 +372,7 @@ export default class SurveyScreen extends Component {
       <View>
         <TextInput
           style={styles.textBox}
-          onChangeText={text => onChange(text)}
+          onChangeText={(text) => onChange(text)}
           numberOfLines={1}
           underlineColorAndroid={'white'}
           placeholder={placeholder}
@@ -385,7 +381,7 @@ export default class SurveyScreen extends Component {
           multiline
           onBlur={onBlur}
           blurOnSubmit
-          returnKeyType='done'
+          returnKeyType="done"
         />
       </View>
     );
@@ -395,7 +391,7 @@ export default class SurveyScreen extends Component {
     return (
       <TextInput
         style={styles.numericInput}
-        onChangeText={text => {
+        onChangeText={(text) => {
           onChange(text);
         }}
         underlineColorAndroid={'white'}
@@ -427,7 +423,7 @@ export default class SurveyScreen extends Component {
       >
         <View style={styles.container}>
           <SimpleSurvey
-            ref={s => {
+            ref={(s) => {
               this.surveyRef = s;
             }}
             survey={survey}
@@ -442,8 +438,8 @@ export default class SurveyScreen extends Component {
             renderNext={this.renderNextButton.bind(this)}
             renderFinished={this.renderFinishedButton.bind(this)}
             renderQuestionText={this.renderQuestionText}
-            onSurveyFinished={answers => this.onSurveyFinished(answers)}
-            onAnswerSubmitted={answer => this.onAnswerSubmitted(answer)}
+            onSurveyFinished={(answers) => this.onSurveyFinished(answers)}
+            onAnswerSubmitted={(answer) => this.onAnswerSubmitted(answer)}
             renderTextInput={this.renderTextBox}
             renderNumericInput={this.renderNumericInput}
             renderInfo={this.renderInfoText}

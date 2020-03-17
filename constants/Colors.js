@@ -13,6 +13,9 @@ export default {
   noticeText: '#fff'
 };
 
+export const GREEN = 'rgba(141,196,63,1)';
+export const PURPLE = 'rgba(108,48,237,1)';
+
 export const COLORS = [
   'aliceblue',
   'antiquewhite',
