@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Ionicons } from '@expo/vector-icons';
+
 import TabBarIcon from '../components/TabBarIcon';
 import TriageScreen from '../screens/TriageScreen';
 import TimelineScreen from '../screens/TimelineScreen';
@@ -22,7 +24,11 @@ export default function BottomTabNavigator({ navigation, route }) {
         options={{
           title: 'Triage',
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon focused={focused} name="md-checkbox-outline" />
+            <TabBarIcon
+              font={Ionicons}
+              focused={focused}
+              name="md-checkbox-outline"
+            />
           )
         }}
       />
@@ -32,7 +38,7 @@ export default function BottomTabNavigator({ navigation, route }) {
         options={{
           title: 'Timeline',
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon focused={focused} name="md-analytics" />
+            <TabBarIcon font={Ionicons} focused={focused} name="md-analytics" />
           )
         }}
       />
@@ -42,7 +48,7 @@ export default function BottomTabNavigator({ navigation, route }) {
         options={{
           title: 'Map',
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon focused={focused} name="md-pin" />
+            <TabBarIcon font={Ionicons} focused={focused} name="md-pin" />
           )
         }}
       />

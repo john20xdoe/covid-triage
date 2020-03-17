@@ -1,11 +1,10 @@
 import * as React from 'react';
-import { Ionicons } from '@expo/vector-icons';
-
 import Colors from '../constants/Colors';
 
 export default function TabBarIcon(props) {
+  const TabIcon = props.font; // import from'@expo/vector-icons';
   return (
-    <Ionicons
+    <TabIcon
       name={props.name}
       size={30}
       style={{ marginBottom: -3 }}
