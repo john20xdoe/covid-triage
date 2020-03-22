@@ -6,12 +6,18 @@ import {
   MultipleSelectionGroup
 } from 'react-native-simple-survey';
 
-export const survey: (Info | TextInput | NumericInput | SelectionGroup | MultipleSelectionGroup)[] = [
+export const survey: (
+  | Info
+  | TextInput
+  | NumericInput
+  | SelectionGroup
+  | MultipleSelectionGroup
+)[] = [
   {
     questionType: 'Info',
     questionText: `
-    The healthcare systems are crowded.
-    This questionnaire will help you assess your severity.
+    The healthcare systems are getting crowded.
+    Help ease the load by using this survey to help you assess your severity.
   `
   },
   {
