@@ -1,4 +1,14 @@
-export const survey = [
+import {
+  TextInput,
+  Info,
+  NumericInput,
+  SelectionGroup,
+  MultipleSelectionGroup
+} from 'react-native-simple-survey';
+
+export const survey: Array<
+  Info | TextInput | NumericInput | SelectionGroup | MultipleSelectionGroup
+> = [
   {
     questionType: 'Info',
     questionText: `
@@ -11,7 +21,7 @@ export const survey = [
     questionText: 'Where are you right now?',
     questionId: 'locationPreference',
     questionSettings: {
-      allowDeselect: false
+      allowDeselection: false
     },
     options: [
       {
