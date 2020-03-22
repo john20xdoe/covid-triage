@@ -24,12 +24,12 @@ export default function App(props) {
         SplashScreen.preventAutoHide();
 
         // Load our initial navigation state
-        setInitialNavigationState(await getInitialState());
+        setInitialNavigationState((await getInitialState()) as any);
 
         // Load fonts
         await Font.loadAsync({
           ...Ionicons.font,
-          'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
+          'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf')
         });
       } catch (e) {
         // We might want to provide this error information to an error reporting service
@@ -49,7 +49,10 @@ export default function App(props) {
     return (
       <View style={styles.container}>
         {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-        <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
+        <NavigationContainer
+          ref={containerRef}
+          initialState={initialNavigationState}
+        >
           <Stack.Navigator>
             <Stack.Screen name="Root" component={BottomTabNavigator} />
           </Stack.Navigator>
@@ -62,6 +65,6 @@ export default function App(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-  },
+    backgroundColor: '#fff'
+  }
 });

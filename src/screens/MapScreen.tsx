@@ -11,8 +11,8 @@ export default function MapScreen() {
       contentContainerStyle={styles.contentContainer}
     >
       <OptionButton
-        icon="md-alert"
-        label="HOSPITALS - for emergencies"
+        icon='md-alert'
+        label='HOSPITALS - for emergencies'
         onPress={() =>
           WebBrowser.openBrowserAsync(
             'https://www.google.com/maps/search/hospitals/'
@@ -21,8 +21,8 @@ export default function MapScreen() {
       />
 
       <OptionButton
-        icon="md-pin"
-        label="CLINICS - for other conditions"
+        icon='md-pin'
+        label='CLINICS - for other conditions'
         onPress={() =>
           WebBrowser.openBrowserAsync(
             'https://www.google.com/maps/search/clinics'
@@ -31,8 +31,8 @@ export default function MapScreen() {
       />
 
       <OptionButton
-        icon="md-home"
-        label="HOSPITALS - equipped for testing"
+        icon='md-home'
+        label='HOSPITALS - equipped for testing'
         onPress={() =>
           WebBrowser.openBrowserAsync(
             'https://www.google.com/maps/d/embed?mid=1fLGy90ANDvsdhjOPJZDVa8N7U0idMYlj'
@@ -52,7 +52,7 @@ function OptionButton({ icon, label, onPress, isLastOption }) {
     >
       <View style={{ flexDirection: 'row' }}>
         <View style={styles.optionIconContainer}>
-          <Ionicons name={icon} size={22} color="rgba(0,0,0,0.35)" />
+          <Ionicons name={icon} size={22} color='rgba(0,0,0,0.35)' />
         </View>
         <View style={styles.optionTextContainer}>
           <Text style={styles.optionText}>{label}</Text>

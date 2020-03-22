@@ -6,9 +6,7 @@ import {
   MultipleSelectionGroup
 } from 'react-native-simple-survey';
 
-export const survey: Array<
-  Info | TextInput | NumericInput | SelectionGroup | MultipleSelectionGroup
-> = [
+export const survey: (Info | TextInput | NumericInput | SelectionGroup | MultipleSelectionGroup)[] = [
   {
     questionType: 'Info',
     questionText: `

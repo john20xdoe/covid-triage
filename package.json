@@ -1,6 +1,7 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
+    "format": "tslint --project . --fix --format stylish",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -45,6 +46,7 @@
     "@types/react-native": "~0.60.23",
     "babel-preset-expo": "~8.0.0",
     "jest-expo": "~36.0.1",
+    "tslint": "^6.1.0",
     "typescript": "~3.6.3"
   },
   "private": true

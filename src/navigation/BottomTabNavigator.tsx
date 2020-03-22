@@ -19,7 +19,7 @@ export default function BottomTabNavigator({ navigation, route }) {
   return (
     <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}>
       <BottomTab.Screen
-        name="Triage"
+        name='Triage'
         component={TriageScreen}
         options={{
           title: 'Triage',
@@ -27,28 +27,28 @@ export default function BottomTabNavigator({ navigation, route }) {
             <TabBarIcon
               font={Ionicons}
               focused={focused}
-              name="md-checkbox-outline"
+              name='md-checkbox-outline'
             />
           )
         }}
       />
       <BottomTab.Screen
-        name="Timeline"
+        name='Timeline'
         component={TimelineScreen}
         options={{
           title: 'Timeline',
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon font={Ionicons} focused={focused} name="md-analytics" />
+            <TabBarIcon font={Ionicons} focused={focused} name='md-analytics' />
           )
         }}
       />
       <BottomTab.Screen
-        name="Map"
+        name='Map'
         component={MapScreen}
         options={{
           title: 'Map',
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon font={Ionicons} focused={focused} name="md-pin" />
+            <TabBarIcon font={Ionicons} focused={focused} name='md-pin' />
           )
         }}
       />
@@ -58,7 +58,7 @@ export default function BottomTabNavigator({ navigation, route }) {
 
 function getHeaderTitle(route) {
   const routeName =
-    route.state?.routes[route.state.index]?.name ?? INITIAL_ROUTE_NAME;
+    route.state!.routes[route.state.index]!.name || INITIAL_ROUTE_NAME;
 
   switch (routeName) {
     case 'Triage':

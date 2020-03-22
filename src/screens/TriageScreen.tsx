@@ -15,7 +15,7 @@ import { MonoText } from '../components/StyledText';
 import { survey } from '../constants/Survey';
 
 export default class TriageScreen extends React.Component {
-  static navigationOptions = () => {
+  public static navigationOptions = () => {
     return {
       headerStyle: {
         height: 40,
@@ -34,7 +34,7 @@ export default class TriageScreen extends React.Component {
     this.state = { answersSoFar: '' };
   }
 
-  onSurveyFinished(answers) {
+  public onSurveyFinished(answers) {
     /**
      *  By using the spread operator, array entries with no values, such as info questions, are removed.
      *  This is also where a final cleanup of values, making them ready to insert into your DB or pass along
@@ -79,7 +79,7 @@ export default class TriageScreen extends React.Component {
    *  user's answers. From updating a 'correct answers' counter to exiting out of an onboarding flow if the user is
    *  is restricted (age, geo-fencing) from your app.
    */
-  onAnswerSubmitted(answer) {
+  public onAnswerSubmitted(answer) {
     this.setState({
       answersSoFar: JSON.stringify(this.surveyRef.getAnswers(), 2)
     });
@@ -95,7 +95,7 @@ export default class TriageScreen extends React.Component {
     }
   }
 
-  renderPreviousButton(onPress, enabled) {
+  public renderPreviousButton(onPress, enabled) {
     return (
       <View
         style={{ flexGrow: 1, maxWidth: 100, marginTop: 10, marginBottom: 10 }}
@@ -111,7 +111,7 @@ export default class TriageScreen extends React.Component {
     );
   }
 
-  renderNextButton(onPress, enabled) {
+  public renderNextButton(onPress, enabled) {
     return (
       <View
         style={{ flexGrow: 1, maxWidth: 100, marginTop: 10, marginBottom: 10 }}
@@ -127,7 +127,7 @@ export default class TriageScreen extends React.Component {
     );
   }
 
-  renderFinishedButton(onPress, enabled) {
+  public renderFinishedButton(onPress, enabled) {
     return (
       <View
         style={{ flexGrow: 1, maxWidth: 100, marginTop: 10, marginBottom: 10 }}
@@ -142,7 +142,7 @@ export default class TriageScreen extends React.Component {
     );
   }
 
-  renderButton(data, index, isSelected, onPress) {
+  public renderButton(data, index, isSelected, onPress) {
     return (
       <View
         key={`selection_button_view_${index}`}
@@ -159,7 +159,7 @@ export default class TriageScreen extends React.Component {
     );
   }
 
-  renderQuestionText(questionText) {
+  public renderQuestionText(questionText) {
     return (
       <View style={{ marginHorizontal: 10 }}>
         <Text numLines={1} style={styles.questionText}>
@@ -169,7 +169,7 @@ export default class TriageScreen extends React.Component {
     );
   }
 
-  renderTextBox(onChange, value, placeholder, onBlur) {
+  public renderTextBox(onChange, value, placeholder, onBlur) {
     return (
       <View>
         <TextInput
@@ -183,13 +183,13 @@ export default class TriageScreen extends React.Component {
           multiline
           onBlur={onBlur}
           blurOnSubmit
-          returnKeyType="done"
+          returnKeyType='done'
         />
       </View>
     );
   }
 
-  renderNumericInput(onChange, value, placeholder, onBlur) {
+  public renderNumericInput(onChange, value, placeholder, onBlur) {
     return (
       <TextInput
         style={styles.numericInput}
@@ -207,7 +207,7 @@ export default class TriageScreen extends React.Component {
     );
   }
 
-  renderInfoText(infoText) {
+  public renderInfoText(infoText) {
     return (
       <View style={{ marginLeft: 10, marginRight: 10 }}>
         <Text style={styles.infoText}>{infoText}</Text>
@@ -215,7 +215,7 @@ export default class TriageScreen extends React.Component {
     );
   }
 
-  render() {
+  public render() {
     return (
       <View style={styles.container}>
         <ScrollView
