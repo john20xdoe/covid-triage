@@ -1,4 +1,5 @@
 declare module 'react-native-simple-survey' {
+  export module SimpleSurvey {}
   export interface Info {
     questionType: 'Info';
     questionText: string | object;

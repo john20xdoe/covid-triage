@@ -162,7 +162,7 @@ export default class TriageScreen extends React.Component {
   public renderQuestionText(questionText) {
     return (
       <View style={{ marginHorizontal: 10 }}>
-        <Text numLines={1} style={styles.questionText}>
+        <Text numberOfLines={1} style={styles.questionText}>
           {questionText}
         </Text>
       </View>
@@ -174,7 +174,7 @@ export default class TriageScreen extends React.Component {
       <View>
         <TextInput
           style={styles.textBox}
-          onChangeText={(text) => onChange(text)}
+          onChangeText={text => onChange(text)}
           numberOfLines={1}
           underlineColorAndroid={'white'}
           placeholder={placeholder}
@@ -183,7 +183,7 @@ export default class TriageScreen extends React.Component {
           multiline
           onBlur={onBlur}
           blurOnSubmit
-          returnKeyType='done'
+          returnKeyType="done"
         />
       </View>
     );
@@ -193,7 +193,7 @@ export default class TriageScreen extends React.Component {
     return (
       <TextInput
         style={styles.numericInput}
-        onChangeText={(text) => {
+        onChangeText={text => {
           onChange(text);
         }}
         underlineColorAndroid={'white'}
@@ -223,7 +223,7 @@ export default class TriageScreen extends React.Component {
           contentContainerStyle={styles.contentContainer}
         >
           <SimpleSurvey
-            ref={(s) => (this.surveyRef = s)}
+            ref={s => (this.surveyRef = s)}
             survey={survey}
             renderSelector={this.renderButton.bind(this)}
             containerStyle={styles.surveyContainer}
@@ -238,8 +238,8 @@ export default class TriageScreen extends React.Component {
             renderNext={this.renderNextButton.bind(this)}
             renderFinished={this.renderFinishedButton.bind(this)}
             renderQuestionText={this.renderQuestionText}
-            onSurveyFinished={(answers) => this.onSurveyFinished(answers)}
-            onAnswerSubmitted={(answer) => this.onAnswerSubmitted(answer)}
+            onSurveyFinished={answers => this.onSurveyFinished(answers)}
+            onAnswerSubmitted={answer => this.onAnswerSubmitted(answer)}
             renderTextInput={this.renderTextBox}
             renderNumericInput={this.renderNumericInput}
             renderInfo={this.renderInfoText}
