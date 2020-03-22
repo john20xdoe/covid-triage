@@ -10,7 +10,7 @@
     "deploy": "expo build:web --no-pwa"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "react-native"
   },
   "dependencies": {
     "@expo/vector-icons": "~10.0.0",
@@ -36,12 +36,16 @@
     "react-native-simple-survey": "^3.1.2",
     "react-native-web": "~0.11.7",
     "react-navigation": "^4.2.2",
-    "react-navigation-stack": "^2.2.3"
+    "react-navigation-stack": "^2.2.3",
+    "react-native-unimodules": "~0.7.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
+    "@babel/core": "~7.6.0",
+    "@types/react": "~16.9.0",
+    "@types/react-native": "~0.60.23",
     "babel-preset-expo": "~8.0.0",
-    "jest-expo": "~36.0.1"
+    "jest-expo": "~36.0.1",
+    "typescript": "~3.6.3"
   },
   "private": true
 }
