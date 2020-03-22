@@ -223,9 +223,7 @@ export default class TriageScreen extends React.Component {
           contentContainerStyle={styles.contentContainer}
         >
           <SimpleSurvey
-            ref={(s) => {
-              this.surveyRef = s;
-            }}
+            ref={(s) => (this.surveyRef = s)}
             survey={survey}
             renderSelector={this.renderButton.bind(this)}
             containerStyle={styles.surveyContainer}
