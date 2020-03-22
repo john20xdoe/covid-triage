@@ -7,7 +7,7 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "test": "jest --watchAll",
-    "deploy": "expo build:web"
+    "deploy": "expo build:web --no-pwa"
   },
   "jest": {
     "preset": "jest-expo"
